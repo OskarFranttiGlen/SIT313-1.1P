@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oskar Frantti Glen - Personal Website</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #f4f4f4;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid #007bff; 
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: left;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #007bff; 
+        }
+
+        .hero-image-container {
+            position: relative;
+            height: 50vh;
+            overflow: hidden;
+        }
+
+        .hero-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: blur(5px); 
+        }
+
+        .hero-text {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        #about {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #007bff; 
+        }
+
+        .job-description {
+            margin-top: 1rem;
+        }
+
+        .divider {
+            width: 80%;
+            height: 1px;
+            background-color: #007bff;
+            margin: 2rem auto;
+        }
+
+        #work {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        #work h2, #gallery h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        .project-grid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .project {
+            display: flex;
+            max-width: 80%; 
+            text-align: left;
+            margin-bottom: 2rem;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .project img {
+            width: 150px;
+            height: auto;
+            object-fit: cover;
+            margin-right: 1rem;
+        }
+
+        .project .project-info {
+            flex: 1;
+        }
+
+        .project .technologies {
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+
+        #gallery {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            max-width: 80%;
+            margin: 0 auto;
+        }
+
+        .image-grid img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .project {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .project img {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+
+            .image-grid {
+                grid-template-columns: 1fr 1fr; 
+            }
+        }
+
+        @media (max-width: 480px) {
+            .image-grid {
+                grid-template-columns: 1fr; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-image-container">
+                <img src="header.jpg" alt="Hero Image">
+                <div class="hero-text">
+                    <h1>Hey, I'm Oskar William Frantti Glen</h1>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <img src="profile.jpg" alt="Oskar Frantti Glen" class="profile-photo">
+            <p class="job-description">I'm a full-stack web developer based in Melbourne, Australia</p>
+        </section>
+
+        <div class="divider"></div>
+
+        <section id="work">
+            <h2>My Projects</h2>
+            <div class="project-grid">
+                <div class="project">
+                    <img src="shifti.png" alt="Project 1">
+                    <div class="project-info">
+                        <h3>Shifti Workforce Management for Shift workers in the Events Space</h3>
+                        <p>Shifti is a Workforce management suite that I have developed to help businesses in the events space manage their staff more effectively. The events space is a fast-paced environment that has constant changes, so we built software that helps companies achieve their goals in staffing.</p>
+                        <p class="technologies">Technologies used: React, Supabase, Typescript</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="homegame.png" alt="Project 2">
+                    <div class="project-info">
+                        <h3>HomeGame Poker Management for peer to peer Home Poker Games</h3>
+                        <p>HomeGame is an app I developed to help me and my friends manage funds and statistics when we play home poker games. I built this to help us keep a strong record of where money was changing hands.</p>
+                        <p class="technologies">Technologies used: React Native (EXPO), Supabase, Typescript</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <section id="gallery">
+            <h2>Image Gallery</h2>
+            <div class="image-grid">
+                <img src="picture1.png" alt="Gallery Image 1">
+                <img src="picture2.png" alt="Gallery Image 2">
+                <img src="picture3.png" alt="Gallery Image 3">
+                <img src="picture4.png" alt="Gallery Image 4">
+                <img src="picture5.png" alt="Gallery Image 5">
+            </div>
+        </section>
+
+        <div class="divider"></div>
+    </main>
+
+    <footer id="contact">
+        <p>oskarfranttiglen@gmail.com</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const heroText = document.querySelector('.hero-text');
+
+            const showHeroText = () => {
+                heroText.style.opacity = '1';
+            };
+
+            const hideHeroText = () => {
+                heroText.style.opacity = '0';
+            };
+
+            document.querySelector('.hero-image-container').addEventListener('mouseover', showHeroText);
+            document.querySelector('.hero-image-container').addEventListener('mouseout', hideHeroText);
+        });
+    </script>
+</body>
+</html>
